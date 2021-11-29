@@ -28,7 +28,7 @@ describe("test", () => {
     await page.goto(baseUrl);
 
     const button = await page.$(".validate-button");
-    button.click();
+    button.click().catch(e => e);
     await page.waitForSelector(".modal-active");
   });
   // как переписать тест, чтобы возвращалось корректное значение ".modal__description" ?
