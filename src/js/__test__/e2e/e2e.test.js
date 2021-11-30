@@ -8,11 +8,12 @@ describe("test", () => {
   const baseUrl = "http://localhost:8888";
 
   beforeAll(async () => {
-    browser = await puppetteer.launch({
+    browser = await puppetteer.launch();
+      /*{//во всем виновата безголовость
       headless: false,
       slowMo: 100,
       devtools: true,
-    });
+    });*/
     page = await browser.newPage();
   });
 
